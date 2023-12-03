@@ -117,11 +117,11 @@ void convertJsonArrayDocument()
 {
     StaticJsonDocument<300> doc;
 
-    JsonArray depth_array = doc.createNestedArray("value");
+    JsonArray integer_array = doc.createNestedArray("value");
 
     for (uint8_t i = 0; i < 15; i++)
     {
-        depth_array.add(i);
+        integer_array.add(i);
     }
 
     serializeJsonPretty(doc, json_to_string);
